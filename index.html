@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://unpkg.com/@hotwired/turbo@7.0.0-rc.1/dist/turbo.es2017-umd.js"></script>
+  <script src="/main.js"></script>
+  <title>index</title>
+</head>
+<body>
+  <a href="/second.html">to the second page</a>
+  <br/>
+  <a href="/second.html" data-turbo="false">to the second page(Disabled Turbo)</a>
+  <br/>
+
+  <turbo-frame id="messages">
+    <a href="/messages.html">load messages</a>
+  </turbo-frame>
+
+</body>
+</html>

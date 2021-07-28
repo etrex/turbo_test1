@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://unpkg.com/@hotwired/turbo@7.0.0-rc.1/dist/turbo.es2017-umd.js"></script>
+  <script src="/main.js"></script>
+  <title>index</title>
+</head>
+<body>
+  <a href="/index.html">to index page</a>
+  <br/>
+  <a href="/index.html" data-turbo="false">to index page(Disabled Turbo)</a>
+  <br/>
+
+  <turbo-frame id="messages" src="/messages.html">
+    loading...
+  </turbo-frame>
+
+  <h1>Frame test</h1>
+  <turbo-frame id="frame1" src="/frame1.html"></turbo-frame>
+  <turbo-frame id="frame2" src="/frame2.html"></turbo-frame>
+
+  <h1>out side of frames</h1>
+  <a href="/frame1_update.html">Update 1（失去局部更新功能）</a><br/>
+  <a href="/frame2_update.html">Update 2（失去局部更新功能）</a><br/>
+  <a href="/frame1_update.html" data-turbo-frame="frame1">Update 1 with frame</a><br/>
+  <a href="/frame2_update.html" data-turbo-frame="frame2">Update 2 with frame</a>
+
+</body>
+</html>
